@@ -1,54 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="stylesheet" href="./assets/css/reponsive.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
     <title>Thế giới di động</title>
-</head>
-<body>
-    <div class="main">
-        <!-- Header -->
-        <nav class="header">
-            <div class="header-top">
-                <div class="header-top__banner grid wide">
-                    <img class="header-banner__img" src="./assets/imgs/header-banner.png" alt="header banner">
-                    <i class="fa-solid fa-chevron-right header-banner__icon header-banner__next"></i>
-                    <i class="fa-solid fa-chevron-left header-banner__icon header-banner__prev"></i>
-                </div>
+  </head>
+  <body>
+    <!-- App -->
+    <div class="main h-[1000px]">
+      <!-- Header -->
+      <nav class="h-header-height">
+        <!-- TOP HEADER -->
+        <div class="bg-black">
+          <div class="h-top-header-height relative container">
+            <img
+              class="responsive-img"
+              src="./assets/imgs/header-banner.png"
+              alt="header banner"
+            />
+            <i
+              class="fa-solid fa-chevron-right header-banner__icon header-banner__next"
+            ></i>
+            <i
+              class="fa-solid fa-chevron-left header-banner__icon header-banner__prev"
+            ></i>
+          </div>
+        </div>
+        <!-- MAIN HEADER -->
+        <div class="h-main-header-height bg-primary pt-[10px]">
+          <!-- MID HEADER -->
+          <div class="container flex items-center">
+            <div class="pr-[15px]">
+              <img
+                class="w-logo-wide min-w-[228px]"
+                src="./assets/imgs/logo.png"
+                alt="logo"
+              />
             </div>
-            <div class="header-main">
-                <div class="grid wide header-mid">
-                    <div class="header-logo">
-                        <img class="header-logo__img" src="./assets/imgs/logo.png" alt="logo">
-                    </div>
-                    <div class="header-mid__branch bg-primary-sub">
-                        <span>Xem giá, tồn kho tại:</span> 
-                        <span class="brand-name">Hà Nội</span>
-                        <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                    <div class="header-mid__search">
-                        <input type="text" placeholder="Bạn tìm gì">
-                    </div>
-                    <span class="text-red-500">Hello</span>
-                </div>
+            <div
+              class="bg-secondary text-[#333] relative flex flex-col min-w-[137px] py-[4px] pr-[6px] pl-[10px] text-[1.1rem] leading-[15px] rounded-[4px] cursor-pointer mr-[21px]"
+            >
+              <span>Xem giá, tồn kho tại:</span>
+              <span class="font-bold">Hà Nội</span>
+              <i
+                class="fa-solid fa-caret-down absolute right-[8px] top-[50%] translate-y-[-50%] text-[1.4rem]"
+              ></i>
             </div>
-        </nav>
+            <div class="h-[40px] relative">
+              <input
+                class="block w-[302px] h-full py-[8px] pr-[8px] pl-[13px] rounded-[4px]"
+                type="text"
+                placeholder="Bạn tìm gì..."
+              />
+              <i
+                class="fa-solid fa-magnifying-glass absolute right-[8px] top-[50%] translate-y-[-50%] text-[1.7rem]"
+              ></i>
+            </div>
+            <a href="#" class="btn min-w-[95px] max-w-[96px] mx-[21px]"
+              >Lịch sử đơn hàng</a
+            >
+            <a href="#" class="btn flex gap-x-[8px]">
+              <i class="fa-brands fa-opencart text-[2.2rem]"></i>
+              <span class="font-bold text-[#333] whitespace-nowrap"
+                >Giỏ hàng</span
+              >
+            </a>
+            <ul class="flex items-center">
+              <li class="min-h-[36px] flex items-center separate">
+                <a class="flex flex-col text-center px-[12px]" href="#">
+                  <span>24h</span>
+                  <span class="whitespace-nowrap">Công nghệ</span>
+                </a>
+              </li>
+              <li class="min-h-[36px] flex items-center separate">
+                <a class="text-center px-[12px] whitespace-nowrap" href="#">
+                  Hỏi Đáp
+                </a>
+              </li>
+              <li class="min-h-[36px] flex items-center">
+                <a class="text-center px-[12px] whitespace-nowrap" href="#">
+                  Game App
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- BOTTOM HEADER -->
+          <div class="container">
+            <ul
+              class="flex items-center gap-x-[10px] pt-[10px] pb-[10px] mx-[-10px]"
+            >
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/icon-phone.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">Điện thoại</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/icon-laptop.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">Laptop</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/icon-tablet.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">Tablet</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/icon-phu-kien.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">Phụ kiện</span>
+                  <i class="fa-solid fa-caret-down text-[1.6rem]"></i>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/icon-smartwatch.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">Smartwatch</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/watch-icon.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">Đồng hồ</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/icon-pc.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">PC, máy in</span>
+                  <i class="fa-solid fa-caret-down text-[1.6rem]"></i>
+                </a>
+              </li>
+              <li>
+                <a class="p-[10px]" href="#">
+                  <span class="leading-[1.6]">Máy cũ giá rẻ</span>
+                </a>
+              </li>
+              <li>
+                <a class="p-[10px]" href="#">
+                  <span class="leading-[1.6]">Sim, thẻ cào</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                  <img
+                    class="w-[20px]"
+                    src="./assets/imgs/icon-phone.png"
+                    alt=""
+                  />
+                  <span class="leading-[1.6]">Dịch vụ tiện ích</span>
+                  <i class="fa-solid fa-caret-down text-[1.6rem]"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-        <!-- Main content -->
-        <section class="main-content">
-            Content
-        </section>
+      <!-- Main content -->
+      <section class="main-content">Content</section>
 
-        <!-- Footer -->
-        <section class="footer">
-            Footer
-        </section>
+      <!-- Footer -->
+      <section class="footer">Footer</section>
     </div>
-</body>
+  </body>
 </html>

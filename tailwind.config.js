@@ -2,14 +2,22 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
-    colors: {
-      primary: {
-        sub: "rgba(255,172,10,.6)",
-        main: "#ffd400"
+    extend: {
+      height: {
+        "header-height": "var(--header-height)",
+        "main-header-height": "var(--main-header-height)",
       },
-      transparent: 'transparent',
+      width: {
+        "logo-wide": "var(--logo-wide)",
+      },
+    },
+    colors: {
+      primary: "var(--primary-color)",
+      secondary: "var(--secondary-color)",
+      black: "var(--black-color)",
+      white: "var(--white-color)",
+      transparent: "transparent",
     },
   },
   plugins: [],
-}
+};
