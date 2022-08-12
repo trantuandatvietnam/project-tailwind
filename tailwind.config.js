@@ -10,6 +10,9 @@ module.exports = {
       width: {
         "logo-wide": "var(--logo-wide)",
       },
+      backgroundImage: {
+        discount: "linear-gradient(to right,#3bacf0,#1b6dc1)"
+      }
     },
     colors: {
       primary: "var(--primary-color)",

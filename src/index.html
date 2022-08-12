@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- App -->
-    <div class="main h-[1000px]">
+    <div class="main">
       <!-- Header -->
       <nav class="h-header-height">
         <!-- TOP HEADER -->
@@ -130,7 +130,7 @@
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                <a class="flex items-center gap-x-[6px] p-[10px] relative group" href="#">
                   <img
                     class="w-[20px]"
                     src="./assets/imgs/icon-phu-kien.png"
@@ -138,6 +138,11 @@
                   />
                   <span class="leading-[1.6]">Phụ kiện</span>
                   <i class="fa-solid fa-caret-down text-[1.6rem]"></i>
+                  <ul class="absolute min-w-[160px] top-[100%] right-0 bg-white px-[12px] py-[8px] rounded-md shadow-xl triangle hidden group-hover:block">
+                    <li class="mb-[8px]">Tai nghe</li>
+                    <li class="mb-[8px]">Sạc</li>
+                    <li>Đồng hồ</li>
+                  </ul>
                 </a>
               </li>
               <li>
@@ -161,7 +166,7 @@
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                <a class="flex items-center gap-x-[6px] p-[10px] relative group" href="#">
                   <img
                     class="w-[20px]"
                     src="./assets/imgs/icon-pc.png"
@@ -169,6 +174,10 @@
                   />
                   <span class="leading-[1.6]">PC, máy in</span>
                   <i class="fa-solid fa-caret-down text-[1.6rem]"></i>
+                  <ul class="absolute min-w-[160px] top-[100%] right-0 bg-white px-[12px] py-[8px] rounded-md shadow-xl triangle hidden group-hover:block">
+                    <li class="mb-[8px]">Máy in tài liệu</li>
+                    <li class="mb-[8px]">Máy in 3d</li>
+                  </ul>
                 </a>
               </li>
               <li>
@@ -182,7 +191,7 @@
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-x-[6px] p-[10px]" href="#">
+                <a class="flex items-center gap-x-[6px] p-[10px] group relative" href="#">
                   <img
                     class="w-[20px]"
                     src="./assets/imgs/icon-phone.png"
@@ -190,6 +199,11 @@
                   />
                   <span class="leading-[1.6]">Dịch vụ tiện ích</span>
                   <i class="fa-solid fa-caret-down text-[1.6rem]"></i>
+                  <ul class="absolute min-w-[160px] top-[100%] right-0 bg-white px-[12px] py-[8px] rounded-md shadow-xl triangle hidden group-hover:block">
+                    <li class="mb-[8px]">Thẻ nạp</li>
+                    <li class="mb-[8px]">Garena</li>
+                    <li>Chuyển tiền</li>
+                  </ul>
                 </a>
               </li>
             </ul>
@@ -198,10 +212,848 @@
       </nav>
 
       <!-- Main content -->
-      <section class="main-content">Content</section>
+      <section class="main-content">
+        <!-- CATEGORY -->
+        <div class="container bg-white pb-[36px]">
+          <div>
+            <div class="category flex items-center gap py-[15px] px-[12px]">
+              <div>
+                <span class="cate-active cursor-pointer py-0 px-[12px] pb-[8px]">
+                  Sản phẩm mới
+                </span>
+              </div>
+              <div>
+                <span class="hover:text-[#2f80ed] cursor-pointer py-0 px-[12px] pb-[8px]">
+                  Sản phẩm cũ
+                </span>
+              </div>
+              <div>
+                <span class="hover:text-[#2f80ed] cursor-pointer py-0 px-[12px] pb-[8px]">
+                 Tin tức
+                </span>
+              </div>
+            </div>
+        </div>
+        <!-- FILTER -->
+        <div class="flex items-center pt-[20px] pb-[10px] pl-[12px] gap-x-[10px]">
+          <div class="product-filter active">
+            <span>Tất cả (22)</span>
+          </div>
+          <div class="product-filter">
+            <span>Điện thoại (7)</span>
+          </div>
+          <div class="product-filter">
+            <span>Dán màn hình (10)</span>
+          </div>
+          <div class="product-filter">
+            <span>Ốp lưng đ.thoại (5)</span>
+          </div>
+        </div>
+        <!-- OPTIONS -->
+        <div class="pt-[5px] h-[50px] flex items-center justify-between">
+          <div class="flex items-center h-full gap-x-[20px]">
+            <div class="text-[#2f80ed] pl-[12px] cursor-pointer">
+              <span>
+                Hãng
+              </span>
+              <i class="fa-solid fa-caret-down text-[1.6rem] ml-[4px]"></i>
+            </div>
+            <div class="text-[#2f80ed] pl-[12px] cursor-pointer">
+              <span>
+                Giá
+              </span>
+              <i class="fa-solid fa-caret-down text-[1.6rem] ml-[4px]"></i>
+            </div>
+            <div class="text-[#2f80ed] pl-[12px] cursor-pointer">
+              <span>
+                Tính năng
+              </span>
+              <i class="fa-solid fa-caret-down text-[1.6rem] ml-[4px]"></i>
+            </div>
+          </div>
+          <!-- SORT -->
+          <div class="text-[#2f80ed] mr-[25px] cursor-pointer">
+            <span>
+              Sắp xếp: Nổi bật nhất
+            </span>
+            <i class="fa-solid fa-caret-down text-[1.6rem] ml-[4px]"></i>
+          </div>
+        </div>
+        <!-- PRODUCTS -->
+        <div class="grid grid-cols-5 ml-[-10px] mr-[-10px]">
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1] relative">
+            <div class="absolute top-[12px] left-[12px] bg-[#f1f1f1] p-[4px] z-10">
+              <span class="text-[1.1rem] discount-animation">Trả góp 0%</span>
+            </div>
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip13 cuong luc.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 512GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">32.490.000₫</span>
+              <span>-17%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">26.790.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">4</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/iPhone-13-green.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                iPhone 13 256GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">27.990.000₫</span>
+              <span>-17%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">22.990.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">44</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip13 cuong luc.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 128GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">24.990.000₫</span>
+              <span>-18%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">20.290.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">490</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/iphone-13-pro-max-blue.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                iPhone 13 Pro Max 256GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.7''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">36.990.000₫</span>
+              <span>-16%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">30.990.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">1237</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip 13 promax greeen.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 512GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">41.490.000₫</span>
+              <span>-14%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">35.290.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">99</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip13-pink.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 512GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">32.490.000₫</span>
+              <span>-17%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">26.790.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">4</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/mieng-dan-kinh-iphone-13-mini-belkin-thumb-1-600x600.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 Pink
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.9''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">54.490.000₫</span>
+              <span>-17%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">50.790.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">4</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip13-pink.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 512GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">32.490.000₫</span>
+              <span>-17%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">26.790.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">4</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/iPhone-13-green.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                iPhone 13 256GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">27.990.000₫</span>
+              <span>-17%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">22.990.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">44</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip13 cuong luc.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 128GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">24.990.000₫</span>
+              <span>-18%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">20.290.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">490</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/iphone-13-pro-max-blue.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                iPhone 13 Pro Max 256GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.7''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">36.990.000₫</span>
+              <span>-16%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">30.990.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">1237</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip 13 promax greeen.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 512GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">41.490.000₫</span>
+              <span>-14%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">35.290.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">99</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip13-pink.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 512GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">32.490.000₫</span>
+              <span>-17%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">26.790.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">4</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/ip13 cuong luc.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                IPhone 13 128GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.1''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">24.990.000₫</span>
+              <span>-18%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">20.290.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">490</span>
+            </div>
+          </div>
+          <div class="product-card cursor-pointer group border-[1px] border-[#f1f1f1]">
+            <div class="py-[10px] group-hover:translate-y-[-8px] ease-in-out transition-all duration-300">
+              <img src="./assets/imgs/iphone-13-pro-max-blue.jpg" alt="">
+            </div>
+            <div class="flex items-center gap-x-[2px] w-[118px] mb-[8px] text-[10px] text-white relative rounded-[500px] bg-discount">
+              <div>
+                <img class="w-[20px]" src="./assets/imgs/pecent-icon.png" alt="">
+              </div>
+              <span>
+                VNPAY GIẢM 500K 
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="group-hover:text-[#288ad6] transition-all">
+                iPhone 13 Pro Max 256GB
+              </span>
+            </div>
+            <div class="mb-[8px]">
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                6.7''
+              </span>
+              <span class="text-[12px] p-[2px] mr-[6px] bg-[#eaeaea] border border-[#eaeaea]">
+                Super Retina XDR
+              </span>
+            </div>
+            <div class="mb-[6px]">
+              <span>Online giá rẻ</span>
+            </div>
+            <div class="mb-[6px]">
+              <span class="line-through">36.990.000₫</span>
+              <span>-16%</span>
+            </div>
+            <div class="mb-[6px] text-[16px]">
+              <span class="font-bold">30.990.000₫</span>
+            </div>
+            <div class="flex items-center gap-x-[6px]">
+              <div class="flex items-center gap-x-[4px]">
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star text-[#fb6e2e] text-[1.2rem]"></i>
+                <i class="fa-solid fa-star-half-stroke text-[#fb6e2e] text-[1.2rem]"></i>
+              </div>
+              <span class="mt-[2px]">1237</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center my-[20px] py-[20px]">
+          <div class="flex items-center justify-center gap-x-[8px] group transition-all cursor-pointer hover:bg-[#288ad6] hover:text-[white] border w-[375px] py-[12px] border-[#288ad6] font-bold text-[#288ad6]">
+            <span>Còn 7 sản phẩm</span>
+            <i class="fa-solid fa-sort-down mb-[4px]"></i>
+          </div>
+        </div>
+        <div class="bg-[#eee] border-[#ddd] border flex items-center py-[10px] mx-auto gap-x-[20px] w-[600px] h-[100px]">
+          <span class="block py-[7px] px-[15px] w-[238px] leading-[22px]">
+            Bạn có hài lòng trong việc tìm kiếm không?
+          </span>
+          <div class="flex items-center">
+            <div class="w-[144px] flex flex-col gap-y-[8px] items-center justify-center group cursor-pointer">
+              <img class="w-[40px]" src="./assets/imgs/satisfied.png" alt="">
+              <span class="group-hover:font-bold">Hài lòng</span>
+            </div>
+            <div class="w-[144px] flex flex-col gap-y-[8px] items-center justify-center group cursor-pointer">
+              <img class="w-[40px]" src="./assets/imgs/not-satisfied-1597043-1352676 (1).png" alt="">
+              <span class="group-hover:font-bold">Không hài lòng</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Footer -->
-      <section class="footer">Footer</section>
+      <section class="bg-white mt-[48px] p-[24px]">
+        <div class="container">
+          <div class="flex justify-between">
+            <ul>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Tích điểm quà tặng VIP</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Lịch sử mua hàng</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Công tác bán hàng cùng TGDĐ</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Tìm hiểu về mua trả góp</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Chính sách bảo hành</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Xem thêm</li>
+            </ul>
+            <ul>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Giới thiệu công ty (MWG.vn)</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Tuyển dụng</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Gửi góp ý, khiếu nại</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Tìm siêu thị (3.266 shop)</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Xem bản mobile</li>
+            </ul>
+            <ul>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">
+                <span>Tổng đài hỗ trợ (Miễn phí gọi)</span>
+              </li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">
+                Gọi mua: <span class="text-[#2f80ed] font-bold">1800.1060</span> (7:30 - 22:00)
+              </li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Kỹ thuật: <span class="text-[#2f80ed] font-bold">1800.1060</span> (7:30 - 22:00)</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Khiếu nại: <span class="text-[#2f80ed] font-bold">1800.1060</span> (7:30 - 22:00)</li>
+              <li class="mb-[10px] cursor-pointer hover:text-[#2f80ed]">Bảo hành: <span class="text-[#2f80ed] font-bold">1800.1060</span> (7:30 - 22:00)</li>
+            </ul>
+            <div>
+              <div class="flex items-center gap-x-8 mb-[36px]">
+                <div class="cursor-pointer flex items-center gap-x-4">
+                  <i class=" text-[blue] fa-brands fa-facebook"></i>
+                  <span class="text-[#2f80ed]">375K fans</span>
+                </div>
+                <div class="curso-pointer flex items-center gap-x-4">
+                  <i class=" text-[red] fa-brands fa-youtube"></i>
+                  <span class="text-[#2f80ed]">876K người đăng ký</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-[#222] mb-[12px]">Website cùng tập đoàn</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img class="w-[200px]" src="./assets/imgs/Logo-webmoi.png" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-[15px]">
+        <p class="w-[1200px] mx-auto text-center text-[1.2rem]">© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. GPMXH: 238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 04/06/2020.
+          Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP.Hồ Chí Minh. Điện thoại: 028 38125960. Email: cskh@thegioididong.com. Chịu trách nhiệm nội dung: Huỳnh Văn Tốt. Xem chính sách sử dụng</p>
+      </section>
+    </div>
+    <div class="fixed bottom-[8rem] right-[8rem] p-[12px] rounded-full bg-[#ffd400] shadow-2xl">
+      <img class="w-[66px]" src="./assets/imgs/chat-icon.jpg" alt="">
     </div>
   </body>
 </html>
